@@ -14,7 +14,7 @@ resource "null_resource" "test" {}
 
 resource "null_resource" "null" {
   provisioner "local-exec" {
-    command = "env"
+    command = "env | grep TF_MY_ENV_VAR"
   }
   
   triggers = {
