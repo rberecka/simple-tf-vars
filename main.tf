@@ -12,10 +12,11 @@ terraform {
 
 resource "null_resource" "test" {}
 
-data "environment_variables" "all" {
-  filter    = "MY_ENV_VAR"
-}
-
-output "env-vars" {
-  value = data.environment_variables.all
+resource "null_resource" "null" {
+  provisioner "local-exec" {
+    command = "env"
+  }
+  triggers = {
+    always = uuid()
+  }
 }
