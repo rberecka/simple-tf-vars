@@ -16,6 +16,7 @@ resource "null_resource" "null" {
   provisioner "local-exec" {
     command = "env"
   }
+  
   triggers = {
     always = uuid()
   }

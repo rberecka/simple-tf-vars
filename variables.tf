@@ -10,3 +10,6 @@ variable "my_var_b_sensitive" {
   type = string
   sensitive = true
 }
+variable "my_auto_var" {
+  type = string
+}
