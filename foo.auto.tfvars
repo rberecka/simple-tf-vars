@@ -1,1 +1,1 @@
-my_auto_var = "auto_var_value"
+
