@@ -13,5 +13,4 @@ variable "my_var_b_sensitive" {
 
 variable "my_env_var" {
   type = string
-  category = "env"
 }
