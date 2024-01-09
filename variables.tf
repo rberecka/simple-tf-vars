@@ -10,7 +10,3 @@ variable "my_var_b_sensitive" {
   type = string
   sensitive = true
 }
-
-variable "my_env_var" {
-  type = string
-}
