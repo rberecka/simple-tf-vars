@@ -16,16 +16,16 @@ resource "null_resource" "null" {
   provisioner "local-exec" {
     command = "env"
   }
-  
+
   triggers = {
     always = uuid()
   }
-
-  data "external" "env" {
-    program = ["${path.module}/env.sh"]
-  }
+}
   
-  output "foo" {
-    value = data.external.env.result["foo"]
-  }
+data "external" "env" {
+  program = ["${path.module}/env.sh"]
+}
+
+output "foo" {
+  value = data.external.env.result["foo"]
 }
